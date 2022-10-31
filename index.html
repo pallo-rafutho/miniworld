@@ -1,0 +1,243 @@
+<html>
+    <head>
+        <title>assign1</title>
+        <style>
+            body{margin: 0;}
+            canvas { width: 100%; height: 100%; }
+            l1{
+                position: absolute;
+                bottom: 30px;
+                left: 15px;
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: 15px;
+            }
+            .toggle1 {
+                position : absolute ;
+                bottom: 15px;
+                left: 15px;
+                display : inline-block;
+                width : 20px;
+                height : 10px;
+                background-color: red;
+                border-radius: 30px;
+                border: 2px solid red;
+		    }
+            .toggle1:after {
+                content: '';
+                position: absolute;
+                width: 10px;
+                height: 10px;
+                border-radius: 50%;
+                background-color: grey;
+                
+                left: 0px;
+                transition: all 0.5s;
+            }
+            .checkbox:checked + .toggle1::after {
+                left : 10px;
+            }
+            .checkbox:checked + .toggle1 {
+                background-color: blue;
+                border: 2px solid blue;
+            }
+            .checkbox {
+                display : none;
+            }
+
+            l2{
+                position: absolute;
+                bottom: 30px;
+                left: 55px;
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: 15px;
+            }
+
+            .toggle2 {
+                position : absolute ;
+                bottom: 15px;
+                left: 55px;
+                display : inline-block;
+                width : 20px;
+                height : 10px;
+                background-color: red;
+                border-radius: 30px;
+                border: 2px solid red;
+		    }
+            .toggle2:after {
+                content: '';
+                position: absolute;
+                width: 10px;
+                height: 10px;
+                border-radius: 50%;
+                background-color: grey;
+                
+                left: 0px;
+                transition: all 0.5s;
+            }
+            .checkbox:checked + .toggle2::after {
+                left : 10px;
+            }
+            .checkbox:checked + .toggle2 {
+                background-color: blue;
+                border: 2px solid blue;
+            }
+            .checkbox {
+                display : none;
+            }
+
+
+            l3{
+                position: absolute;
+                bottom: 30px;
+                left: 150px;
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: 15px;
+            }
+
+            .speedslider{
+                width: 300px;
+                position: absolute;
+                bottom: 15px;
+                left: 130px;
+            }
+        
+            .Sslider {
+                -webkit-appearance: none;
+                background: blue  ;
+                width: 50%;
+                height: 10px;
+                border-radius: 50px;
+                opacity: 2;
+            }
+        
+        
+            .Sslider::-webkit-slider-thumb {
+                -webkit-appearance: none;
+                cursor: pointer;
+                background: grey  ;
+                width: 20px;
+                height: 20px;
+                border-radius: 50%;
+            }
+            .Sslider:hover {
+                opacity: 1;
+            }
+
+
+            l4{
+                position: absolute;
+                bottom: 30px;
+                left: 350px;
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: 15px;
+            }
+
+            .zoomslider{
+                width: 300px;
+                position: absolute;
+                bottom: 15px;
+                left: 330px;
+            }
+        
+            .Zslider {
+                -webkit-appearance: none;
+                background: blue  ;
+                width: 50%;
+                height: 10px;
+                border-radius: 50px;
+                opacity: 2;
+            }
+        
+        
+            .Zslider::-webkit-slider-thumb {
+                -webkit-appearance: none;
+                cursor: pointer;
+                background: grey  ;
+                width: 20px;
+                height: 20px;
+                border-radius: 50%;
+            }
+            .Zslider:hover {
+                opacity: 1;
+            }
+
+            l5{
+                position: absolute;
+                bottom: 30px;
+                left: 500px;
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: 15px;
+            }
+            .toggle3 {
+                position : absolute ;
+                bottom: 15px;
+                left: 500px;
+                display : inline-block;
+                width : 20px;
+                height : 10px;
+                background-color: red;
+                border-radius: 30px;
+                border: 2px solid red;
+		    }
+            .toggle3:after {
+                content: '';
+                position: absolute;
+                width: 10px;
+                height: 10px;
+                border-radius: 50%;
+                background-color: grey;
+                
+                left: 0px;
+                transition: all 0.5s;
+            }
+            .checkbox:checked + .toggle3::after {
+                left : 10px;
+            }
+            .checkbox:checked + .toggle3 {
+                background-color: blue;
+                border: 2px solid blue;
+            }
+            .checkbox {
+                display : none;
+            }
+            
+        </style>
+    </head>
+    <body>
+        <l1>spin</l1>
+        <input type="checkbox" id="switch1"
+					class="checkbox" />
+		<label for="switch1" class="toggle1">
+        	
+		</label>
+
+        <l2>direction</l2>
+        <input type="checkbox" id="switch2"
+					class="checkbox" />
+		<label for="switch2" class="toggle2">
+
+        </label>
+
+        <l3>speed</l3>
+        <div class="speedslider">
+            <input type="range" min="1" max="10" value="5" class="Sslider" id="speedRange">
+            
+        </div>
+
+        <l4>zoom</l4>
+        <div class="zoomslider">
+            <input type="range" min="50" max="400" value="250" class="Zslider" id="zoomRange">
+              
+        </div>
+        
+        <l5>day</l5>
+        <input type="checkbox" id="switch3"
+					class="checkbox" />
+		<label for="switch3" class="toggle3">
+        	
+		</label>
+       
+        <script src="three.js"></script>
+        <script src="village.js"></script>
+    </body>
+</html>
